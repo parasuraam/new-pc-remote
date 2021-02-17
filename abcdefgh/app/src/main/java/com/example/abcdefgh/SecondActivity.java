@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
                 try {
 
                         Activity activity = null;
-                        final StringBuilder message = (StringBuilder) Server.getInstance(activity).objectInputStream.readObject();
+                        final String message = (String) Server.getInstance(activity).objectInputStream.readObject();
                         if (message != null) {
                             runOnUiThread(new Runnable() {
                                 @Override
